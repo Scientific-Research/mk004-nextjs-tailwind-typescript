@@ -4,6 +4,7 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 
 export const Nav = () => {
   const activeSegment = useSelectedLayoutSegment();
+
   return (
     <nav>
       <ul className="flex gap-4 bg-slate-700 text-white p-2 font-semibold rounded mb-4">
@@ -28,7 +29,7 @@ export const Nav = () => {
         <li>
           <Link
             href="/techbooks"
-            className={activeSegment === 'techbooks' ? 'text-yello-200' : ''}
+            className={activeSegment === 'techbooks' ? 'text-yellow-200' : ''}
           >
             Tech Books
           </Link>

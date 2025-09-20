@@ -21,6 +21,7 @@ export default function PageTechBooks() {
           />
           <div>
             <p className="font-bold text-xl">{techBook.title}</p>
+            <p className="italic">{techBook.description}</p>
           </div>
         </div>
       ))}

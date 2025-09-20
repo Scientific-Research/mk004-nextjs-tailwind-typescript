@@ -35,8 +35,8 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
   useEffect(() => {
     (async () => {
       const response = await axios.get(techBooksUrl);
-      const _response = response.data;
-      setTechBooks(_response);
+      const _techBooks = response.data;
+      setTechBooks(_techBooks);
     })();
   }, []);
 
