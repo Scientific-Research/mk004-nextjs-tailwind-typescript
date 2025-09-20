@@ -1,10 +1,13 @@
 'use client';
+import { use } from 'react';
+
 export default function PageTechSkillsItem({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = params;
+  const { id } = use(params);
+  console.log(id);
 
   return (
     <>
