@@ -1,8 +1,19 @@
-"use client";
+'use client';
+
+import { AppContext } from '@/AppContext';
+import { useContext } from 'react';
+
 export default function PageTechSkills() {
+  const { techSkills } = useContext(AppContext);
+
   return (
     <>
-      <p>This is the Tech Skills Page!</p>
+      <p>There are {techSkills.length} tech skills!</p>
+      <ul className="list-disc ml-6 mt-3">
+        {techSkills.map((techSkill) => (
+          <li key={techSkill.id}>{techSkill.name}</li>
+        ))}
+      </ul>
     </>
   );
 }
