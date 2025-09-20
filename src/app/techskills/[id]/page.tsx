@@ -1,8 +1,14 @@
-"use client";
-export default function PageTechSkillsItem() {
+'use client';
+export default function PageTechSkillsItem({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const { id } = params;
+
   return (
     <>
-      <p>This is the Tech Skills Page Item!</p>
+      <p>showing id:{id}</p>
     </>
   );
 }
