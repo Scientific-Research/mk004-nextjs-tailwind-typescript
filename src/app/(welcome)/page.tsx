@@ -1,8 +1,13 @@
-"use client";
+'use client';
+
+import { AppContext } from '@/AppContext';
+import { useContext } from 'react';
+
 export default function PageWelcome() {
+  const { welcomeMessage } = useContext(AppContext);
   return (
-    <>
-      <p>This is the Welcome Page</p>
-    </>
+    <main>
+      <p>{welcomeMessage}</p>
+    </main>
   );
 }

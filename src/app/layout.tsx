@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.scss';
 import { Inter } from 'next/font/google';
 import { Header } from '@/components/Header';
+import { AppProvider } from '@/AppContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,8 +22,10 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={`${inter.className} bg-slate-300 p-6`}
       >
-        <Header />
-        {children}
+        <AppProvider>
+          <Header />
+          {children}
+        </AppProvider>
       </body>
     </html>
   );
