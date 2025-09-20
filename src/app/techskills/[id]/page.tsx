@@ -1,5 +1,6 @@
 'use client';
-import { use } from 'react';
+import { AppContext } from '@/AppContext';
+import { use, useContext } from 'react';
 
 export default function PageTechSkillsItem({
   params,
@@ -7,11 +8,23 @@ export default function PageTechSkillsItem({
   params: Promise<{ id: string }>;
 }) {
   const { id } = use(params);
-  console.log(id);
+  // console.log(id);
+  const { techSkills } = useContext(AppContext);
+  const techSkill = techSkills.find((m) => String(m.id) === id);
 
   return (
     <>
-      <p>showing id:{id}</p>
+      {techSkill && (
+        <div>
+          <p className="text-x1">{techSkill.name}</p>
+          <p className="italic">{techSkill.description}</p>
+          <p>
+            <a className="underline" target="_blank" href={techSkill.url}>
+              more info
+            </a>
+          </p>
+        </div>
+      )}
     </>
   );
 }
