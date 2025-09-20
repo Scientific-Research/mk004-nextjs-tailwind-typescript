@@ -16,7 +16,7 @@ export default function PageTechSkillsItem({
     <>
       {techSkill && (
         <div>
-          <p className="text-x1">{techSkill.name}</p>
+          <p className="font-bold">{techSkill.name}</p>
           <p className="italic">{techSkill.description}</p>
           <p>
             <a className="underline" target="_blank" href={techSkill.url}>
