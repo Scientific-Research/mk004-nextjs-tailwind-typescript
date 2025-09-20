@@ -10,6 +10,8 @@
   --fontFamily: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+$mainColor: yellowgreen;
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -18,10 +20,22 @@ body {
   font-size: 2rem;
 
   h1 {
-    color: yellowgreen;
+    color: $mainColor;
   }
 
   p {
     font-size: 1.5rem;
   }
 }
+
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+// $mainColor: green;
+
+// main {
+//   h1 {
+//     color: $mainColor;
+//   }
+// }
