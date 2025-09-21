@@ -6,7 +6,7 @@ import { useContext } from 'react';
 export default function PageWelcome() {
   const { welcomeMessage } = useContext(AppContext);
   return (
-    <main>
+    <main className="pageWelcome">
       <p>{welcomeMessage}</p>
     </main>
   );

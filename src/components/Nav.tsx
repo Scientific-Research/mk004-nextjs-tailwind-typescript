@@ -6,7 +6,7 @@ export const Nav = () => {
     <nav className="components-Nav">
       <ul className="ul-Nav">
         <li className="li-Nav">
-          <Link href="/">Welcome</Link>
+          <Link href="/welcome">Welcome</Link>
         </li>
 
         <li className="li-Nav">
