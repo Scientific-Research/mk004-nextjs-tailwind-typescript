@@ -6,9 +6,9 @@ export const Nav = () => {
   const activeSegment = useSelectedLayoutSegment();
 
   return (
-    <nav>
-      <ul className="flex gap-4 bg-slate-700 text-white p-2 font-semibold rounded mb-4">
-        <li>
+    <nav className="components-Nav">
+      <ul className="ul-Nav">
+        <li className="li-Nav">
           <Link
             href="/"
             className={activeSegment === '(welcome)' ? 'text-yellow-200' : ''}
@@ -17,7 +17,7 @@ export const Nav = () => {
           </Link>
         </li>
 
-        <li>
+        <li className="li-Nav">
           <Link
             href="/techskills"
             className={activeSegment === 'techskills' ? 'text-yellow-200' : ''}
@@ -26,7 +26,7 @@ export const Nav = () => {
           </Link>
         </li>
 
-        <li>
+        <li className="li-Nav">
           <Link
             href="/techbooks"
             className={activeSegment === 'techbooks' ? 'text-yellow-200' : ''}
