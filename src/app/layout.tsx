@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.scss';
 import { Header } from '@/components/Header';
 import { AppProvider } from '@/AppContext';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Tech Site',
@@ -18,10 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        suppressHydrationWarning={true}
-        className={`${inter.className} bg-slate-300 p-6`}
-      >
+      <body suppressHydrationWarning={true}>
         <AppProvider>
           <Header />
           {children}

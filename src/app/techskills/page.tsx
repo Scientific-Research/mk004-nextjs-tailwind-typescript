@@ -10,12 +10,10 @@ export default function PageTechSkills() {
   return (
     <>
       <p>There are {techSkills.length} tech skills!</p>
-      <ul className="list-disc ml-6 mt-4">
+      <ul>
         {techSkills.map((techSkill) => (
           <li key={techSkill.id}>
-            <Link href={`/techskills/${techSkill.id}`}>
-              {techSkill.name}
-            </Link>
+            <Link href={`/techskills/${techSkill.id}`}>{techSkill.name}</Link>
           </li>
         ))}
       </ul>
