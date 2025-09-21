@@ -9,8 +9,10 @@ export default function PageTechSkills() {
 
   return (
     <>
-      <p>There are {techSkills.length} tech skills!</p>
-      <ul>
+      <p className="techskills-p">
+        There are <span>{techSkills.length}</span> tech skills!
+      </p>
+      <ul className="techskills">
         {techSkills.map((techSkill) => (
           <li key={techSkill.id}>
             <Link href={`/techskills/${techSkill.id}`}>{techSkill.name}</Link>
