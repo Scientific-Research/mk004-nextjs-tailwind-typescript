@@ -9,18 +9,21 @@ export default function PageTechBooks() {
 
   return (
     <>
-      <p>There are {techBooks.length} tech books: </p>
+      <p className="techbook-p">
+        There are <span>{techBooks.length}</span> tech books:{' '}
+      </p>
       {techBooks.map((techBook) => (
-        <div key={techBook.id}>
+        <div key={techBook.id} className="techbooks">
           <Image
             src={`/images/techBooks/${techBook.idCode}.jpg`}
             alt="book"
             width="100"
             height="100"
           />
-          <div>
-            <p>{techBook.title}</p>
-            <p className="italic">{techBook.description}</p>
+
+          <div className="title-description">
+            <p className="title">{techBook.title}</p>
+            <p className="description">{techBook.description}</p>
           </div>
         </div>
       ))}
